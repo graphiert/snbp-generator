@@ -223,3 +223,68 @@
     left: 50%;
     transform: translate(-50%, 60%);
 }
+
+@media screen and (max-width: 768px){
+    body {
+        touch-action: none;
+    }
+    .animation-walk-player{
+        top: 62%;
+        transform: translate(-50%, 50%);
+    }
+    .animation-idle-player-prolog{
+        margin-top:57vh;
+    }
+    .animation-nantang-enemy{
+        margin-top:57vh;
+        width: 165px;
+        height: 155px;
+    }
+    .animation-idle-enemy2-prolog{
+        margin-top:57vh;
+    }
+    .run{
+        margin-top: 14vh;
+    }
+    .animation-idle-player{
+        top: 56%;
+    }
+    .animation-idle-enemy{
+        top: 56%;
+    }
+    .animation-idle-enemy2{
+        top: 55%;
+    }
+    .animation-attack1-enemy{
+        margin-top: 2vh;
+    }
+    .animation-attack1-player2{
+        margin-top: 2vh;
+    }
+    .animation-attack1-player{
+        margin-top: 2vh;
+    }
+    .animation-attack2-player2{
+        margin-top: 2vh;
+    }
+    .animation-attack2-enemy{
+        margin-top: 2vh;
+    }
+    .animation-attack2-player{
+        margin-top: 2vh;
+    }
+    .animation-dead-player{
+        margin-top: 5vh;
+    }
+    .animation-ulti{
+        top: 55%;
+    }
+    .animation-ulti2{
+        top: 55% ;
+    }
+    .animation-ulti-final{
+        margin-top: 4vh;
+    }
+    
+}
+

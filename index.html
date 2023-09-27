@@ -44,7 +44,10 @@ button{
     width: calc(100vh * 9 / 16); /* 9:16 aspect ratio 
     height: 100vh;
     text-align: center;*/
-   background: url(asset/backgroundstart.jpg) center/cover no-repeat fixed;
+    background-image: url(asset/backgroundstart.jpg);
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
   /*background-size: cover;
             /*background-color :white*/
             width: calc(100vh * 9 / 16); 
@@ -462,7 +465,7 @@ background-color:#bf2b2b;
                 <p class="textProlog">"Dengan tekad yang kuat, Hanzo bersiap untuk menggunakan logika dan kebijaksanaannya untuk membawa kedamaian 
                     kembali dan menjaga kehormatan samurai yang telah dijunjung tinggi."</p>
                 <button onclick="prolog3()">next</button>
-                <div style="display: flex;">
+                <div class="run" style="display: flex;">
                     <div class="animation-run-player" id="runPlayer"></div> 
                     <div class="animation-run-enemy" id="runEnemy"></div>
                     <div class="animation-shot" id="shot"></div> 
@@ -681,8 +684,7 @@ function prolog3(){
 function startGame(){
     prologAudio.play()
     document.getElementById("loby").style.display = "none";
-    document.getElementById("white-area").style.background = "url(asset/backgroundplay.jpg)"
-    document.getElementById("white-area").style.backgroundSize = "cover"
+    document.getElementById("white-area").style.backgroundImage = "url(asset/backgroundplay.jpg)"
     document.getElementById("prolog").style.display = "block";
     document.getElementById("prolog1").style.display = "block";
     document.getElementById("walkPlayer").style.display = "block";
@@ -1239,20 +1241,16 @@ function nextRound(){
     }
 
     if (round === 2) {
-        document.getElementById("white-area").style.background = 'url(asset/background2.jpg)'
-        document.getElementById("white-area").style.backgroundSize = 'cover'
+        document.getElementById("white-area").style.backgroundImage = "url(asset/background2.jpg)"
     }
     if (round === 3) {
-        document.getElementById("white-area").style.background = 'url(asset/background3.jpg)'
-        document.getElementById("white-area").style.backgroundSize = 'cover'
+        document.getElementById("white-area").style.backgroundImage = "url(asset/background3.jpg)"
     }
     if (round === 4) {
-        document.getElementById("white-area").style.background = 'url(asset/background4.jpg)'
-        document.getElementById("white-area").style.backgroundSize = 'cover'
+        document.getElementById("white-area").style.backgroundImage = "url(asset/background4.jpg)"
     }
     if (round === 5) {
-        document.getElementById("white-area").style.background = 'url(asset/backgroundplay.jpg)'
-        document.getElementById("white-area").style.backgroundSize = 'cover'
+        document.getElementById("white-area").style.backgroundImage = "url(asset/backgroundplay.jpg)"
     }
 }
 
