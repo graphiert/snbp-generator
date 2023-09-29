@@ -487,7 +487,7 @@ background-color:#bf2b2b;
                     <div class="container7">
                         <div class="box7" id="scrollBox">
                         <p id='materi'></p>
-                        <button onclick="tutupPenjelasanProto()">Tutup</button>
+                        <button onclick="tutupPenjelasanProto(); preventEnter(event)">Tutup</button>
                          </div>
                     </div>
                 </div>
@@ -595,6 +595,12 @@ var loseAudio = document.getElementById('loseAudio');
 var winAudio = document.getElementById('winAudio');
 var enemyAudio= document.getElementById('enemyAudio');
 
+function preventEnter(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+            }
+        }
+        
 /** === === FUNGSI UNTUK SELECTED WORDS === === **/
 
 function toggleSelected(word) {
