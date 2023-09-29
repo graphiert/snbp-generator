@@ -487,7 +487,7 @@ background-color:#bf2b2b;
                     <div class="container7">
                         <div class="box7" id="scrollBox">
                         <p id='materi'></p>
-                        <button onclick="tutupPenjelasanProto(); preventEnter(event)">Tutup</button>
+                        <button onclick="tutupPenjelasanProto()">Tutup</button>
                          </div>
                     </div>
                 </div>
@@ -979,7 +979,7 @@ function startQuestion() {
             <button id="word4type3" class='selectable' " onclick='toggleSelected(this)'></button>
         </div></div></div></div>
 
-        <button style="display:block;" onclick='checkSelectedWords()' id='attack0'>Attack!</button>
+        <button style="display:block;" onclick='checkSelectedWords()' id='attack0' onkeydown="return event.key !== 'Enter'">Attack!</button>
 
         <div id = 'pop-up-trueFalse'>
             <div id="pop-up-trueProto" style="display: none;">
@@ -989,7 +989,7 @@ function startQuestion() {
                 <div id="myPopup" class="popup">
                     <h2>Selamat</h2>
                     <p>Jawaban anda benar</p>
-                    <button onclick="tutupPopupProto(); preventEnter(event)" onkeydown="return event.key !== 'Enter'">Tutup</button>
+                    <button onclick="tutupPopupProto();>Tutup</button>
                 </div>
             </div>
             <div id="pop-up-falseProto" style="display: none;">
@@ -998,7 +998,7 @@ function startQuestion() {
                 <!-- Pop-Up -->
                 <div id="myPopup" class="popup">
                     <h2 id='timeOut2'>Jawaban anda salah</h2>
-                    <button onclick="tutupPopupProto(); preventEnter(event)" onkeydown="return event.key !== 'Enter'">Tutup</button>
+                    <button onclick="tutupPopupProto()">Tutup</button>
                 </div>
             </div>
         </div>
