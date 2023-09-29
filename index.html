@@ -989,7 +989,7 @@ function startQuestion() {
                 <div id="myPopup" class="popup">
                     <h2>Selamat</h2>
                     <p>Jawaban anda benar</p>
-                    <button onclick="tutupPopupProto()">Tutup</button>
+                    <button onclick="tutupPopupProto(); preventEnter(event)">Tutup</button>
                 </div>
             </div>
             <div id="pop-up-falseProto" style="display: none;">
@@ -998,7 +998,7 @@ function startQuestion() {
                 <!-- Pop-Up -->
                 <div id="myPopup" class="popup">
                     <h2 id='timeOut2'>Jawaban anda salah</h2>
-                    <button onclick="tutupPopupProto()">Tutup</button>
+                    <button onclick="tutupPopupProto(); preventEnter(event)">Tutup</button>
                 </div>
             </div>
         </div>
