@@ -55,8 +55,8 @@ button{
             text-align: center;
             position: relative;
 }}
-     
-      
+
+
 
 #popup {
     width: 40%;
@@ -161,11 +161,11 @@ button{
 }
 
 #countdownBar {
-  
+
     width: 112%;
     height: 1.6vh;
     background-color: #ccc;
-   
+
     position: relative;
     border-radius: 30px;
     margin-top: 6.3vh;
@@ -189,7 +189,7 @@ button{
     margin-left: 0vh;
     text-align: center;
     position:relative;
-   
+
 
 }
 
@@ -224,7 +224,7 @@ button{
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
-    
+
      /* Gaya untuk pop-up */
  .popup {
     position: fixed;
@@ -290,7 +290,7 @@ button{
 
     align-items: center;
   justify-content: center;
-   
+
 
 }
 
@@ -369,7 +369,7 @@ button{
   height:12vh;
 }
     #posAns{
- 
+
         height: 11.5vh;
         margin-top: 4vh;
         align-items: center;
@@ -380,7 +380,7 @@ button{
         margin-left: 5.5vh;
         font-family: monospace, Arial, Helvetica, sans-serif;
         overflow-y: scroll;
-        
+
     }
     #posAns::-webkit-scrollbar{
         display: none;
@@ -440,9 +440,9 @@ background-color:#bf2b2b;
         <div id="loby">
             <button id ="start" onclick="startGame()">Start</button>
          </div>
-        
+
         <!-- CERITA SEBELUM MASUK GAME -->
-        
+
         <div id="prolog">
             <div id="prolog1" class="prolog1" style="display:none;">
                 <p data-aos="flip-down" data-aos-delay="1000" data-aos-duration="5000" class="textProlog">"Di tanah Jepang yang penuh kedamaian, hiduplah seorang 
@@ -473,9 +473,9 @@ background-color:#bf2b2b;
             </div>
         </div>
 
-        
+
         <!-- IN GAME/ DALAM GAME -->
-        
+
         <div id="inGame">
 <!-- SOAL #1 -->
 
@@ -493,7 +493,7 @@ background-color:#bf2b2b;
                 </div>
             </div>
             <div id="question"></div>
-            
+
             <br>
 
                 <div id="health" >
@@ -514,7 +514,7 @@ background-color:#bf2b2b;
                     <div class="animation-attack1-enemy" id="attackEnemy1"></div> 
                     <div class="animation-attack2-player" id="attack2Player1"></div> 
                     <div class="animation-attack2-enemy" id="attack2Enemy1"></div> 
-                    
+
                     <div class="animation-attack1-player2" id="attackPlayer2"></div> 
                     <div class="animation-attack1-enemy2" id="attackEnemy2"></div> 
                     <div class="animation-attack2-player2" id="attack2Player2"></div> 
@@ -545,7 +545,7 @@ background-color:#bf2b2b;
                 <div class="animation-dead-player" id="deadPlayer"></div>               
             </div>
         </div>
-        
+
     </div>
     <script src="soal.js"></script>
     <script>
@@ -595,12 +595,6 @@ var loseAudio = document.getElementById('loseAudio');
 var winAudio = document.getElementById('winAudio');
 var enemyAudio= document.getElementById('enemyAudio');
 
-function preventEnter(event) {
-            if (event.keyCode === 13) {
-                event.preventDefault();
-            }
-        }
-        
 /** === === FUNGSI UNTUK SELECTED WORDS === === **/
 
 function toggleSelected(word) {
@@ -625,7 +619,7 @@ function checkSelectedWords() {
     clearTimeout(myTimeOut)
     const selectableWords = document.querySelectorAll('.selectable');
     const selectedWords = Array.from(selectableWords).filter(word => word.classList.contains('selected'))
-    
+
     if (tipeTerpilih === 'tipe1' || tipeTerpilih === 'tipe2'){
         jawabanTerpilih = questions[prop][randomizesoaltipe1].jawaban
     }else if (tipeTerpilih === 'tipe3'){
@@ -648,11 +642,11 @@ function checkSelectedWords() {
         }
         tampilserang()
         decreaseHealthEnemy()
-        setTimeout(() =>  { document.getElementById('pop-up-trueProto').style.display = 'block' }, 250 ) // Ganti dengan fungsi ketika jawaban benar
+        setTimeout(() =>  { document.getElementById('pop-up-trueProto').style.display = 'block' }, 100 ) // Ganti dengan fungsi ketika jawaban benar
     } else {
         decreaseHealth()
         tampilserangmusuh()
-        setTimeout(() =>  { document.getElementById('pop-up-falseProto').style.display = 'block' }, 250 )// Ganti dengan fungsi ketika jawaban salah
+        setTimeout(() =>  { document.getElementById('pop-up-falseProto').style.display = 'block' }, 100 )// Ganti dengan fungsi ketika jawaban salah
         if (((tipeTerpilih === 'tipe1' || tipeTerpilih === 'tipe2') && selectedWords.length === 0)){
             setTimeout(function(){
                 alert('Anda harus memilih salah satu opsi jawaban yang tersedia sebelum menekan tombol "Attack"')
@@ -664,7 +658,7 @@ function checkSelectedWords() {
         }
     }
 }
-    
+
 /** === === PENUTUP FUNGSI SELECTED WORDS === === **/
 
 //PROLOG
@@ -755,7 +749,7 @@ function clearCountdown() {
 
 // generate soal
 function startQuestion() {
-    
+
    updateCountdown()
    const question = document.getElementById('question')
    question.innerHTML =''
@@ -895,7 +889,7 @@ function startQuestion() {
     }else if(round === 1 && fase > 6){
         randomizesoaltipe1 = Math.floor(Math.random()* (11-0+1) ) + 0    
     }
-    
+
     if (tipeTerpilih === 'tipe1'){
         tipe = 1
     }else if (tipeTerpilih === 'tipe2'){
@@ -947,7 +941,7 @@ function startQuestion() {
         prop = `t${tipe}r${R}`
     }
     soalHtml = questions[prop][randomizesoaltipe1].soal
-    
+
     let jenisTipe
     if (tipeTerpilih === 'tipe1'){
         jenisTipe = 'Tentukan pernyataan dibawah bernilai true atau false!'
@@ -978,9 +972,7 @@ function startQuestion() {
             <button id="word3type3" class='selectable' " onclick='toggleSelected(this)'></button>
             <button id="word4type3" class='selectable' " onclick='toggleSelected(this)'></button>
         </div></div></div></div>
-
-        <button style="display:block;" onclick='checkSelectedWords()' id='attack0' onkeydown="return event.key !== 'Enter'">Attack!</button>
-
+        <button style="display:block;" onclick='checkSelectedWords()' id='attack0'>Attack!</button>
         <div id = 'pop-up-trueFalse'>
             <div id="pop-up-trueProto" style="display: none;">
                 <!-- Latar Belakang Gelap (Overlay) -->
@@ -989,7 +981,7 @@ function startQuestion() {
                 <div id="myPopup" class="popup">
                     <h2>Selamat</h2>
                     <p>Jawaban anda benar</p>
-                    <button onclick="tutupPopupProto();>Tutup</button>
+                    <button onclick="tutupPopupProto()">Tutup</button>
                 </div>
             </div>
             <div id="pop-up-falseProto" style="display: none;">
@@ -1003,7 +995,7 @@ function startQuestion() {
             </div>
         </div>
     </div>`
-    
+
     if (tipeTerpilih === 'tipe1' || tipeTerpilih === 'tipe2'){
         document.getElementById('jtipe12').style.display = 'block'
         document.getElementById('word1type12').textContent = 
@@ -1021,7 +1013,7 @@ function startQuestion() {
         document.getElementById('word4type3').textContent = 
         questions[prop][randomizesoaltipe1].opsi4
     } 
-    
+
     count++
 }
 
@@ -1030,7 +1022,7 @@ let currentHealth = 100;
 let healthBar = document.getElementById("health-value");
 
 function decreaseHealth() {
-    
+
     if (currentHealth > 0) {
         currentHealth -= 7;
         healthBar.style.width = currentHealth + "%"
@@ -1051,7 +1043,7 @@ const healthBarEnemy = document.getElementById("health-value-enemy");
 
 
 function decreaseHealthEnemy() {
-    
+
     if (currentHealthEnemy > 0) {
         currentHealthEnemy -= nilaiAttack;
         healthBarEnemy.style.width = currentHealthEnemy + "%"
@@ -1324,8 +1316,8 @@ function tutupPopupProto(){
     }
     document.getElementById('pop-up-trueFalse').style.display = "none"
     ending()
-    
-    
+
+
     if ( currentHealth < 1 || currentHealthEnemy < 1){
         countdownProp.style.display = 'none'
     } else {
