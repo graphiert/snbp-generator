@@ -648,11 +648,11 @@ function checkSelectedWords() {
         }
         tampilserang()
         decreaseHealthEnemy()
-        setTimeout(() =>  { document.getElementById('pop-up-trueProto').style.display = 'block' }, 100 ) // Ganti dengan fungsi ketika jawaban benar
+        setTimeout(() =>  { document.getElementById('pop-up-trueProto').style.display = 'block' }, 250 ) // Ganti dengan fungsi ketika jawaban benar
     } else {
         decreaseHealth()
         tampilserangmusuh()
-        setTimeout(() =>  { document.getElementById('pop-up-falseProto').style.display = 'block' }, 100 )// Ganti dengan fungsi ketika jawaban salah
+        setTimeout(() =>  { document.getElementById('pop-up-falseProto').style.display = 'block' }, 250 )// Ganti dengan fungsi ketika jawaban salah
         if (((tipeTerpilih === 'tipe1' || tipeTerpilih === 'tipe2') && selectedWords.length === 0)){
             setTimeout(function(){
                 alert('Anda harus memilih salah satu opsi jawaban yang tersedia sebelum menekan tombol "Attack"')
