@@ -29,17 +29,17 @@
 <span id="blocks">
 <span class="abc">
 Made with &#10084; by <a href="https://github.com/anuGrahbodi" style="color: white;">Your Admirer || </a>
-
+</br>
 NISN: <input type="number" id="inisn" placeholder="NISN"><button onclick="generateRandom1()">Randomize NISN</button>
-
+</br>
 Nomor Registrasi: <input type="number" id="inoreg" placeholder="Nomor Registrasi"><button onclick="generateRandom2()">Randomize NoReg</button>
-
+</br>
 Namamu: <input type="text" id="inama" placeholder="Your Admirer">
-
+</br>
 Nama Kampus: <input type="text" id="iuniv" list="univs" placeholder="Nama Kampus">
-
+</br>
 Jurusan: <input type="text" id="iprodi" list="jurusans" placeholder="Jurusan">
-
+</br>
 Jenjang: <select id="dropdownBoxes">
     <option>--choose--</option>
     <option value="cc">S1</option>
@@ -48,24 +48,24 @@ Jenjang: <select id="dropdownBoxes">
     <option value="ff">D2</option>
     <option value="gg">D1</option>
 </select>
-
+</br>
 Link penerimaan kampus: <input type="text" id="ilink" placeholder="penerimaan.mit.ac.id"><button onclick="alertLink()">Link</button>
-
+</br>
 Tanggal Lahir: <input type="date" id="idate" name="Tanggal Lahirmu">
-
+</br>
 Asal Sekolah: <input type="text" id="isch" placeholder="SMAN 1 Gotham">
-
+</br>
 <!-- drop bar Kabupaten/ Kota-->
 Anda tinggal di: <select id="kabBoxes">
     <option>--choose--</option>
     <option value="aa">Kabupaten</option>
     <option value="bb">Kota</option>
 </select>
-
+</br>
 Kabupaten/ Kotamu: <input type="text" id="iname-kab-kot" list="kabKots" placeholder="Kab/kot">
-
+</br>
 Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
-
+</br>
 </span>
 
 <datalist id="univs">
@@ -205,6 +205,8 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
         let year = dateParts[0]
         let formattedDate = day + "/" + month + "/" + year
         document.getElementById("date").textContent = formattedDate
+        document.getElementById("iuniv").value = document.getElementById("univ").value.toUpperCase()
+        document.getElementById("iprodi").value = document.getElementById("prodi").value.toUpperCase()
     }
     function generateRandom1() {
         const prefixes = ["004", "005", "006"]
