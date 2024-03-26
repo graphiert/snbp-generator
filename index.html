@@ -26,6 +26,7 @@
     }
 </style>
 <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<span id="blocks">
 <span class="abc">
 Made with &#10084; by <a href="https://github.com/anuGrahbodi" style="color: white;">Your Admirer || </a>
 
@@ -80,12 +81,14 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
 <button onclick="alertNote()">Note</button>
 <button onclick="alertFeedback()">Feedback</button>
 <button onclick="alertTutorial()">TUTORIAL</button>
+<button onclick="hideMenu()">Sembunyikan Menu</button>
+</span>
 
 <base href="https://pengumuman-snbp-snpmb.bppp.kemdikbud.go.id/">
 <link rel="stylesheet" href="/css/index.css?v=${BUILD_VERSION}" />
 <div id="index-accepted" class="index-accepted">
     <div class="index-accepted-header">
-        <img src="/img/snbp.png" alt="Logo" class="index-accepted-header-icon" />
+        <img src="/img/snbp.png" alt="Logo" class="index-accepted-header-icon"  onclick="showMenu()" />
         <div class="index-accepted-header-title">
             <h1 class="index-accepted-header-title-text">SELAMAT! ANDA DINYATAKAN LULUS SELEKSI SNBP 2024</h1>
         </div>
@@ -98,7 +101,7 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
                 <span class="index-accepted-content-upper-bio-program" id="index-accepted-program"><span id="prodi"></span>&nbsp;(<span id="jenjang"></span>)</span>
                 <span class="index-accepted-content-upper-bio-university" id="index-accepted-university"><span id="univ"></span></span>
             </div>
-            <div class="index-accepted-content-upper-qr" alt="QR" id="index-accepted-qr" style="background-color: white; border-left: 10px solid white; border-top: 10px solid white; border-bottom: 10px solid white; justify-content: center;"><span id="qrcode5"></span></div>
+            <div class="index-accepted-content-upper-qr" alt="QR" id="index-accepted-qr" style="background-color: white; border-left: 10px solid white; border-top: 10px solid white; border-bottom: 10px solid white; justify-content: center; "><span id="qrcode5"></span></div>
             <!--img class="index-accepted-content-upper-qr" alt="QR" id="index-accepted-qr" src="https://static.vecteezy.com/system/resources/previews/002/557/391/large_2x/qr-code-for-scanning-free-vector.jpg"/-->
         </div>
         <div class="index-accepted-content-lower">
@@ -137,6 +140,16 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
     </div>
 </div>
 <script>
+    let abb=0
+    function hideMenu(){
+        if(abb!=1){
+        alert('Ini akan menyembunyikan seluruh menu inputan, termasuk nama, NISN, hingga tombol ini. Klik di logo SNBP dibawah atau refresh halaman ini untuk menampilkan menu kembali');
+        abb=1}
+        document.getElementById("blocks").style.display = 'none'
+    }
+    function showMenu(){
+        document.getElementById("blocks").style.display = 'block'
+    }
     function alertTutorial(){
         alert("Isi setiap kolom kosong yang tersedia di website seperti kolom nama, nisn, nomor registrasi, tanggal lahir, dll. Khusus untuk NISN dan Nomor Registrasi disediakan tombol Randomize untuk memasukkan nilai random ke kolom NISN dan NoReg. Jika telah mengisi seluruhnya, silahkan klik GENERATE untuk melihat hasilnya. Jika ada bagian yang kosong ketika melihat hasilnya, silakan cek ulang kolom dan isi kolom yang masih kosong.")}
     function alertFeedback() {
@@ -149,7 +162,7 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
         alert("Web ini dibuat untuk membuat fake lolos snbp dengan semata-mata untuk tujuan for fun saja. Tidak ada data inputan apapun yang akan dikirim keluar. Harap gunakan dengan bijak! Developer tidak bertanggung jawab atas penyalahgunaan website");
     }
     function alertLink() {
-        var result = confirm("Link penerimaan mahasiswa baru dapat anda cari di google karena memiliki banyak variasi, tapi jika anda malas untuk mencari, ketik saja di input box https://penerimaan.{singkatan kampus}.ac.id/");
+        var result = confirm("Link penerimaan mahasiswa baru dapat anda cari di google karena memiliki banyak variasi, tapi jika anda malas untuk mencari, ketik saja di input box https://penerimaan.{singkatan kampus}.ac.id/. Klik OK untuk memasukkan template web ke input box");
         if (result) {
             document.getElementById('ilink').value = 'https://penerimaan.{singkatan kampus}.ac.id/'
         }
