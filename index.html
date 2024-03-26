@@ -80,7 +80,9 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
 <button onclick="displayInput(); generateQRCode();">GENERATE</button>
 <button onclick="alertNote()">Note</button>
 <button onclick="alertFeedback()">Feedback</button>
+<button onclick="alertAuthor()">Author</button>
 <button onclick="alertTutorial()">TUTORIAL</button>
+<button onclick="goComment()">Kasih Komentar</button>
 <button onclick="hideMenu()">Sembunyikan Menu</button>
 </span>
 
@@ -140,10 +142,22 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
     </div>
 </div>
 <script>
+    function goComment(){
+        var comment = confirm('Beri pendapat anda tentang website ini, komentarmu bisa dilihat sama yang lain juga! Tekan OK untuk ke webnya (secreto.site)')
+        if(comment){
+            window.location.href = "https://secreto.site/am1ic7"
+        }
+    }
+    function alertAuthor(){
+        var author = confirm('Author website ini adalah orang yang terjebak, anda juga? IG @anugrahspsb, Klik OK untuk ke IG. (instagram.com)')
+        if(comment){
+        window.location.href = "https://instagram.com/_u/anugrahspsb"
+        }
+    }
     let abb=0
     function hideMenu(){
         if(abb!=1){
-        alert('Ini akan menyembunyikan seluruh menu inputan, termasuk nama, NISN, hingga tombol ini. Klik di logo SNBP dibawah atau refresh halaman ini untuk menampilkan menu kembali');
+        alert('Ini akan menyembunyikan seluruh menu inputan, termasuk nama, NISN, hingga tombol ini. Klik di logo SNBP dibawah atau refresh halaman ini untuk menampilkan menu kembali.');
         abb=1}
         document.getElementById("blocks").style.display = 'none'
     }
@@ -159,10 +173,10 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
         }
     }
     function alertNote() {
-        alert("Web ini dibuat untuk membuat fake lolos snbp dengan semata-mata untuk tujuan for fun saja. Tidak ada data inputan apapun yang akan dikirim keluar. Harap gunakan dengan bijak! Developer tidak bertanggung jawab atas penyalahgunaan website");
+        alert("Web ini dibuat untuk membuat fake lolos snbp dengan semata-mata untuk tujuan for fun saja. Tidak ada data inputan apapun yang akan dikirim keluar. Harap gunakan dengan bijak! Developer tidak bertanggung jawab atas penyalahgunaan website.");
     }
     function alertLink() {
-        var result = confirm("Link penerimaan mahasiswa baru dapat anda cari di google karena memiliki banyak variasi, tapi jika anda malas untuk mencari, ketik saja di input box https://penerimaan.{singkatan kampus}.ac.id/. Klik OK untuk memasukkan template web ke input box");
+        var result = confirm("Link penerimaan mahasiswa baru dapat anda cari di google karena memiliki banyak variasi, tapi jika anda malas untuk mencari, ketik saja di input box https://penerimaan.{singkatan kampus}.ac.id/. Klik OK untuk memasukkan template web ke input box.");
         if (result) {
             document.getElementById('ilink').value = 'https://penerimaan.{singkatan kampus}.ac.id/'
         }
@@ -191,6 +205,7 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
         }
     })
     // JavaScript to handle the button click and display input
+    let ddd = 0;
     function displayInput() {
         var userInputColumn = ['inisn', 'inoreg', 'inama', 'iuniv', 'iprodi', 'ilink', 'idate', 'isch', 'iname-kab-kot', 'iprov']
         var outputSpan = ['nisn', 'noreg', 'name', 'univ', 'prodi', 'link', 'date', 'sch', 'name-kab-kot', 'prov']
@@ -207,6 +222,11 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
         let year = dateParts[0]
         let formattedDate = day + "/" + month + "/" + year
         document.getElementById("date").textContent = formattedDate
+        if(ddd==0){
+            ddd=1
+        setTimeout(function(){
+        alert("Kalau suka sama webnya, share sama yang lain biar senang juga. Follow ig author sama kasih komentar, ada di menu atas, kalau sudah disembunyikan, klik gambar SNBP biar kembali.")}, 10000)
+        }
     }
     function generateRandom1() {
         const prefixes = ["004", "005", "006"]
