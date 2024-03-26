@@ -1,3 +1,3 @@
 # anuGrahbodi.github.io
 
-Buka link di https://anugrahbodi.github.io/
+Fake lolos / lulus SNBP / Generator SNBP di https://anugrahbodi.github.io/
