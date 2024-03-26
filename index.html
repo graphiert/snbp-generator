@@ -195,6 +195,8 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
         var userInputColumn = ['inisn', 'inoreg', 'inama', 'iuniv', 'iprodi', 'ilink', 'idate', 'isch', 'iname-kab-kot', 'iprov']
         var outputSpan = ['nisn', 'noreg', 'name', 'univ', 'prodi', 'link', 'date', 'sch', 'name-kab-kot', 'prov']
         for(i = 0; i < userInputColumn.length; i++){
+            document.getElementById("iuniv").value = document.getElementById("iuniv").value.toUpperCase()
+        document.getElementById("iprodi").value = document.getElementById("iprodi").value.toUpperCase()
             var inputText = document.getElementById(userInputColumn[i]).value;
             document.getElementById(outputSpan[i]).textContent = document.getElementById(userInputColumn[i]).value          
         }
@@ -205,8 +207,6 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
         let year = dateParts[0]
         let formattedDate = day + "/" + month + "/" + year
         document.getElementById("date").textContent = formattedDate
-        document.getElementById("iuniv").value = document.getElementById("univ").value.toUpperCase()
-        document.getElementById("iprodi").value = document.getElementById("prodi").value.toUpperCase()
     }
     function generateRandom1() {
         const prefixes = ["004", "005", "006"]
