@@ -76,9 +76,10 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
 <datalist id="provs">
 </datalist>
 
-<button onclick="displayInput(); generateQRCode();">Generate</button>
+<button onclick="displayInput(); generateQRCode();">GENERATE</button>
 <button onclick="alertNote()">Note</button>
 <button onclick="alertFeedback()">Feedback</button>
+<button onclick="alertTutorial()">TUTORIAL</button>
 
 <base href="https://pengumuman-snbp-snpmb.bppp.kemdikbud.go.id/">
 <link rel="stylesheet" href="/css/index.css?v=${BUILD_VERSION}" />
@@ -136,7 +137,8 @@ Provinsimu: <input type="text" id="iprov" list="provs" placeholder="Provinsimu">
     </div>
 </div>
 <script>
-
+    function alertTutorial(){
+        alert("Isi setiap kolom kosong yang tersedia di website seperti kolom nama, nisn, nomor registrasi, tanggal lahir, dll. Khusus untuk NISN dan Nomor Registrasi disediakan tombol Randomize untuk memasukkan nilai random ke kolom NISN dan NoReg. Jika telah mengisi seluruhnya, silahkan klik GENERATE untuk melihat hasilnya. Jika ada bagian yang kosong ketika melihat hasilnya, silakan cek ulang kolom dan isi kolom yang masih kosong.")}
     function alertFeedback() {
         var result = confirm("Beri masukan anda mengenai website ini, saran dan kritik akan diapresiasi (sebenarnya ada error di kodenya cuman ntah dimana mau bantu ga pls)! (ngl.link)");
         if (result) {
