@@ -96,7 +96,7 @@
             const prefixes = ["423", "424"];
             const prefix = prefixes[Math.floor(Math.random() * prefixes.length)]
             const suffix = Math.floor(Math.random() * 100000)
-            const randomNumber = `${prefix}${suffix.toString().padStart(5, '0')}`
+            const randomNumber = `${prefix}${suffix.toString().padStart(6, '0')}`
             document.getElementById('inoreg').value = randomNumber
         }
         function generateQRCode() {
