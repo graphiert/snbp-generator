@@ -1,0 +1,11 @@
+            .input-container {
+                display: flex;
+                gap: 10px;
+            }
+        
+            .input-box {
+                width: 100%;
+            }
+            .abc{
+                color: #ffffff;
+            }
