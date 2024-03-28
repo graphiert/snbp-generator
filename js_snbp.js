@@ -5,7 +5,7 @@
                 latch.removeChild(iframe)
             } else {
                 iframe = document.createElement("iframe")
-                iframe.width = "30%"
+                iframe.width = "100%"
                 iframe.height = "100"
                 iframe.scrolling = "no"
                 iframe.frameborder = "yes"
