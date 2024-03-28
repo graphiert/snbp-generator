@@ -9,7 +9,7 @@
             .abc{
                 color: #ffffff;
             }
-            @media screen and(min-width: 1024px){
+            @media screen and(min-width: 1000px){
             #latch-screen{
                 width: 40%
             }
