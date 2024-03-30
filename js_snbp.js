@@ -53,30 +53,21 @@
                 document.getElementById('ilink').value = 'https://penerimaan.{singkatan kampus}.ac.id/'
             }
         }
-            document.getElementById('dropdownBoxes').addEventListener('change', function() {
-            if (this.value === 'cc') {
-                document.getElementById('jenjang').textContent = 'S1'
-            } else if (this.value === 'dd') {
-                document.getElementById('jenjang').textContent = 'D4'
-            }
-            else if (this.value === 'ee') {
-                document.getElementById('jenjang').textContent = 'D3'
-            }
-            else if (this.value === 'ff') {
-                document.getElementById('jenjang').textContent = 'D2'
-            }
-            else if (this.value === 'gg') {
-                document.getElementById('jenjang').textContent = 'D1'
-            }
+        document.getElementById('dropdownBoxes').addEventListener('change', function() {
+        document.getElementById('jenjang').textContent = this.value
         })
         document.getElementById('kabBoxes').addEventListener('change', function() {
-        if (this.value === 'aa') {
-                document.getElementById('kab-kot').textContent = 'Kab.'
-            } else if (this.value === 'bb') {
-                document.getElementById('kab-kot').textContent = 'Kota'
-            }
+            changeKabKot()
         })
-        // JavaScript to handle the button click and display input
+        function changeKabKot() {
+        setTimeout(function() {
+        if (document.getElementById('kabBoxes').value === 'aa') {
+            document.getElementById('kab-kot').textContent = 'Kab.';
+        } else if (document.getElementById('kabBoxes').value === 'bb') {
+            document.getElementById('kab-kot').textContent = 'Kota';
+        }
+        }.bind(this), 1);
+        }
         let ddd = 0;
         function displayInput() {
             var userInputColumn = ['inisn', 'inoreg', 'inama', 'iuniv', 'iprodi', 'ilink', 'idate', 'isch', 'iname-kab-kot', 'iprov']
