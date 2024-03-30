@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="6iGJm9FhpM5PaGmKB2ocmh_lD8G87wqhUcNdMAmRuqU" />
+    <meta name="description" content="SNBP Generator 2024 | Fake Lolos/ Gagal | Template Lolos SNBP 2024 |SNMPTN For Fun Only. SELAMAT! ANDA DINYATAKAN LULUS SELEKSI SNBP 2024. Silakan lakukan pendaftaran ulang. Status penerimaan Anda sebagai mahasiswa akan ditetapkan setelah PTN tujuan melakukan verifikasi data akademik (rapor dan/atau portofolio)." />
+    <meta name="keywords" content="snbp generator, template snbp, template snbp 2024, fake snbp, fake generator snbp, fake lolos snbp, fake lulus snbp, snbp 2024, fake snbp 2024, fake snmptn, generator snmptn, template snmptn, fake tidak lolos snbp, generator snbp gagal, fake snbp anugrahbodi, selamat! anda dinyatakan lulus seleksi snbp 2024, anugrahbodi" />
+    <title>SNBP Generator 2024 | Fake Lolos/Tidak Lolos SNBP | Template SNBP 2024</title>
+  <body></body>
+  </head>
+  <span id="blocks">
+    <span class="abc"> Made with &#10084; by <a href="https://github.com/anuGrahbodi" style="color: white;">Your Admirer </a>|| </br>
+      </br> Mode :    <button id="toggleRedBlue" onclick="changeKabKot()">Lulus/ biru</button><br/>
+      </br> NISN</br><input type="number" id="inisn" placeholder="NISN">
+      <button onclick="generateRandom1()">Randomize NISN</button>
+      </br> Nomor Registrasi </br><input type="number" id="inoreg" placeholder="Nomor Registrasi">
+      <button onclick="generateRandom2()">Randomize NoReg</button>
+      </br> Namamu </br><input type="text" id="inama" placeholder="Your Admirer">
+      <span id="redm">
+      </br> Nama Kampus </br><input type="text" id="iuniv" list="univs" placeholder="Nama Kampus">
+      </br> Program Studi </br><select id="dropdownBoxes">
+        <option>--jenjang--</option>
+        <option value="S1">S1</option>
+        <option value="D4">D4</option>
+        <option value="D3">D3</option>
+        <option value="D2">D2</option>
+        <option value="D1">D1</option>
+      </select><input type="text" id="iprodi" list="jurusans" placeholder="Jurusan">
+      </br> Link penerimaan kampus <br/><input type="text" id="ilink" placeholder="https://penerimaan.mit.ac.id">
+      <button onclick="alertLink()">Link</button>
+      </span>
+      </br> Tanggal Lahir <br/><input type="date" id="idate" name="Tanggal Lahirmu">
+      </br> Asal Sekolah <br/><input type="text" id="isch" placeholder="SMAN 1 Gotham">
+      </br>
+      Anda tinggal di <br/><select id="kabBoxes">
+        <option>--cat--</option>
+        <option value="aa">Kabupaten</option>
+        <option value="bb">Kota</option>
+      </select><input type="text" id="iname-kab-kot" list="kabKots" placeholder="Kab/kot">
+      </br> Provinsimu <br/><input type="text" id="iprov" list="provs" placeholder="Provinsimu">
+      </br>
+    </span>
+    <datalist id="univs"></datalist>
+    <datalist id="jurusans"></datalist>
+    <datalist id="kabKots"></datalist>
+    <datalist id="provs"></datalist>
+    </br>
+    <button onclick="displayInput(); generateQRCode();">GENERATE</button>
+    <button onclick="alertNote()">Note</button>
+    <button onclick="alertFeedback()">Feedback</button>
+    <button onclick="alertAuthor()">Author</button>
+    <button onclick="alertTutorial()">TUTORIAL</button>
+    <button onclick="goComment()">Kasih Komentar</button>
+    <button onclick="playLatch()">Now I've got you in my space (add/rmv)</button>
+    <button onclick="hideMenu()">Sembunyikan Menu</button>
+      <br/>
+    <div id="latch-screen">
+    </div>
+  </span>
+  <link rel="stylesheet" href="css-snbp.css" />
+  <link rel="stylesheet" href="css2-snbp.css" />
+  <body id="body"><div id="main" class="main">
+    <div id="main-route" class="main-route"><div id="index" class="index">  
+        </div></div></div>
+  <script src="qrgen.js"></script>
+  <script src="js_snbp.js"></script>
+</body></html>
