@@ -1,3 +1,4 @@
 # anuGrahbodi.github.io
 
-Fake lolos / lulus SNBP / Generator SNBP di https://anugrahbodi.github.io/
+Generator Pengumuman SNBP di https://anugrahbodi.github.io/snbp-generator/
+Generator Pengumuman UTBK SNBT di https://anugrahbodi.github.io/snbp-generator/
