@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>SNBT - UTBK Generator 2024 | Fake Lulus / Gagal SNBT 2024 </title>
+    <base href="https://anugrahbodi.github.io/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="6iGJm9FhpM5PaGmKB2ocmh_lD8G87wqhUcNdMAmRuqU" />
+    <meta name="description" content="SNBT Generator 2024 | Fake Lolos / Gagal | Template SNBT 2024 |SBMPTN For Fun Only. Selamat! Anda dinyatakan lulus seleksi SNBT SNPMB 2024." />
+    <meta name="keywords" content="snbt generator, template snbt, template snbt 2024, fake snbt, fake generator snbt, fake lolos snbt, fake lulus snbt, snbt utbk 2024, fake snbt 2024, fake sbmptn, generator sbmptn, template sbmptn, fake tidak lolos snbt, generator snbt gagal, fake snbt anugrahbodi, selamat! anda dinyatakan lulus seleksi snbt 2024, anugrahbodi" />
+    <link rel="stylesheet" href="css2-snbp.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="css-snbt.css" />
+</head>
+
+<body>
+    <span id="blocks">
+        <span class="abc"> Made with &#10084; by <a href="https://github.com/anuGrahbodi" style="color: white;">Your Admirer </a>|| <strong>SNBT GENERATOR 2024</strong></br>
+        </br> Mode :    <button id="toggleRedBlue" onclick="changeKabKot()">Lulus/ biru</button><br/><br>
+        Nomor Peserta <br/><input type="text" id="inope" placeholder="Nomor Peserta"/><button onclick="generateNumbers()">Randomize Nomor Peserta</button>
+        </br>
+        Namamu <br/><input type="text" id="iname" placeholder="Your Admirer"/>
+        <span id="redm">
+        </br> Tanggal Lahir <br/><input type="date" id="idate" name="Tanggal Lahirmu">
+        <br/>Kode Kampus - Nama Kampus </br>
+        <input type="text" id="iunivcode" placeholder="3 digit" style="width:100px;" oninput="copyCode()"/> - <input type="text" id="iuniv" placeholder="Nama Kampus" list="univs"/>
+        <br/>Kode Prodi  &nbsp;  &nbsp;  &nbsp;- Nama Prodi
+        <br/><span id="cloneKampusCode">000</span>
+    <input type="text\" id="iprodicode" placeholder="3 digit" style="width:75px; text-align: center;" /> -
+    <input type="text" id="iprodi" placeholder="Program Studi" list="jurusans" />
+    <br/>
+    <button onclick="alertCode()">Kode kampus/ prodi</button>
+    <br/>Pesan KIP Kuliah :
+    <button id="kip" onclick="toggleAct()" style="color: red">Aktif</button>
+    <datalist id="univs"></datalist>
+    <datalist id="jurusans"></datalist>
+    </span>
+    <br/> Jika ukuran QRcode tidak sesuai, GENERATE ulang.
+    </span>
+    </br>
+    </br>
+    <button onclick="displayOutput(); generateQRCode();">GENERATE</button>
+    <button onclick="alertNote()">Note</button>
+    <button onclick="alertFeedback()">Feedback</button>
+    <button onclick="alertAuthor()">Author</button>
+    <button onclick="alertTutorial()">TUTORIAL</button>
+    <button onclick="goComment()">Kasih Komentar</button>
+    <button onclick="playLatch()">Now I've got you in my space (add/rmv)</button>
+    <button onclick="hideMenu()">Sembunyikan Menu</button>
+    <br/>
+    <div id="latch-screen">
+    </div>
+    </span>
+
+    <span id="index" style="justify-content: center;"></span>
+    <script src="qrgen2.js"></script>
+    <script src="js_snbt.js"></script>
