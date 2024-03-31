@@ -115,15 +115,14 @@ function playLatch() {
             capital('iuniv')
             capital('iprodi')
             capital('iname')
+            var inope = document.getElementById('inope').value
+            document.getElementById('no-peserta-diterima').textContent = `${inope.substring(0,2)} - ${inope.substring(2, 6)} - ${inope.substring(6)}`
             var input = ['iname', 'iunivcode', 'iuniv', 'iprodicode', 'iprodi', 'iunivcode']
             var output = ['nama-peserta-diterima', 'kode-ptn-terima', 'nama-ptn-terima', 'kode-prodi-terima', 'nama-prodi-terima', 'kode-ptn-terimas']
             for(let i=0;i<input.length;i++){
                 document.getElementById(output[i]).textContent = document.getElementById(input[i]).value
             }
-    
-            var inope = document.getElementById('inope').value
-            document.getElementById('no-peserta-diterima').textContent = `${inope.substring(0,2)} - ${inope.substring(2, 6)} - ${inope.substring(6)}`
-
+                    
             const dateInput = document.getElementById('idate').value;
             const date = new Date(dateInput)
             const formattedDate = `${date.getDate().toString().padStart(2, '0')} - ${(date.getMonth() + 1).toString().padStart(2, '0')} - ${date.getFullYear()}`
