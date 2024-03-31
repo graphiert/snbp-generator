@@ -132,8 +132,8 @@ function playLatch() {
         blockQr.innerHTML = ''
         var qrcode = new QRCode(blockQr, {
             text: `Made with SNBT GENERATOR : https://anugrahbodi.github.io/snbt-generator/ ~${document.getElementById('inope').value}`,
-            width: getWidth()-34,
-            height: getWidth()-34,
+            width: getWidth()-30,
+            height: getWidth()-30,
             colorDark : "#000000", // Dark color of the QR code
             colorLight : "#ffffff", // Light color of the QR code
             correctLevel : QRCode.CorrectLevel.H // High error correction level
