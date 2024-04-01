@@ -141,7 +141,7 @@ function playLatch() {
         function toggleAct(){
             var buttonState = document.getElementById('kip')
             if(buttonState.textContent==='Aktif'){
-                buttonState.textContent = 'Nonsktif'
+                buttonState.textContent = 'Nonaktif'
                 buttonState.style.color = 'black'
                 document.getElementById('bidik-misi').style.display = 'none'
             }
