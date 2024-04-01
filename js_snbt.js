@@ -93,7 +93,7 @@ function playLatch() {
         function alertCode(){
             const code = confirm('Kode kampus dan prodi berbeda-beda di setiap universitas. Jika tidak punya banyak waktu, klik saja Cancel dan isi kode bebas, namun jika ingin terlihat lebih nyata, klik OK untuk mencari kode kampus dan prodi di web Kemdikbud. (sidata-ptn-snpmb.bppp.kemdikbud.go.id)')
         if(code){
-            window.open('https://sidata-ptn-snpmb.bppp.kemdikbud.go.id/ptn_sb.ph')
+            window.open('https://sidata-ptn-snpmb.bppp.kemdikbud.go.id/ptn_sb.php')
         }
         }
 
