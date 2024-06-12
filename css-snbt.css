@@ -205,7 +205,7 @@
     100% { opacity: 1.0; }
 }
 .custom-input {
-      width: 100%;
+      width: 60%;
       padding-left: 16px; /* px-4 */
       padding-right: 16px; /* px-4 */
       padding-top: 8px; /* py-2 */
@@ -233,7 +233,7 @@
     
     .containers {
       width: 100%;
-      max-width: 15rem; /* max-w-xs */
+      max-width: 25rem; /* max-w-xs */
       margin-top:2vw;
     }
     .inline-container input[type="text"] {
