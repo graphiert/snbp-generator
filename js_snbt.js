@@ -79,14 +79,11 @@ function playLatch() {
             
             function generateNumbers() {
         var iunivCode = Math.floor(Math.random() * (990 - 111 + 1)) + 111
-        if(document.getElementById('iunivcode').value.length===3){
-            var rand1 = document.getElementById('iunivcode').value
-        }
-        else {var rand1 = Math.floor(Math.random() * (500 - 0 + 1))}
+        var rand1 = Math.floor(Math.random() * (500 - 0 + 1))
         var rand2 = Math.floor(Math.random() * (300 - 0 + 1))
         var allCombined = "24" + iunivCode + "0" + rand1.toString().padStart(3, '0') + rand2.toString().padStart(3, '0')
         document.getElementById("inope").value = parseInt(allCombined)
-        document.getElementById("iunivcode").value = iunivCode
+        // document.getElementById("iunivcode").value = iunivCode
         document.getElementById('cloneKampusCode').textContent = iunivCode
             }
 
@@ -102,10 +99,7 @@ function playLatch() {
         }
 
         function displayOutput(){
-            if(document.getElementById('inope').value.length >= 5){
-                document.getElementById('inope').value = document.getElementById('inope').value.substring(0, 2) + document.getElementById('iunivcode').value + document.getElementById('inope').value.substring(5);
-            }
-            else{
+            if(document.getElementById('inope').value.length < 1){
                 generateNumbers()
                 document.getElementById('inope').value = document.getElementById('inope').value.substring(0, 2) + document.getElementById('iunivcode').value + document.getElementById('inope').value.substring(5);
             }
