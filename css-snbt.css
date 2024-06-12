@@ -1,4 +1,4 @@
-body {
+    body {
 	background: #36D1DC;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -203,4 +203,62 @@ body {
     0% { opacity: 1.0; }
     50% { opacity: 0.5; }
     100% { opacity: 1.0; }
+}
+.custom-input {
+      width: 100%;
+      padding-left: 16px; /* px-4 */
+      padding-right: 16px; /* px-4 */
+      padding-top: 8px; /* py-2 */
+      padding-bottom: 8px; /* py-2 */
+      border: 1px solid #d1d5db; /* border-gray-300 */
+      border-radius: 0.5rem; /* rounded-lg */
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); /* shadow-sm */
+      transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+      background-color: #f7fafc; /* bg-gray-100 */
+      font-size: 0.875rem; /* text-sm */
+    }
+    
+    .custom-input:hover {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06); /* hover:shadow-lg */
+      border-color: #60a5fa; /* hover:border-blue-300 */
+    }
+    
+    .custom-label {
+      display: block;
+      color: #ffffff; /* text-gray-700 */
+      font-size: 0.875rem; /* text-sm */
+      margin-left: 1vw;
+      margin-bottom: 0.5rem; /* mb-2 */
+    }
+    
+    .containers {
+      width: 100%;
+      max-width: 20rem; /* max-w-xs */
+      margin-top:2vw;
+    }
+    .inline-container input[type="text"] {
+      width: auto;
+      flex-grow: 1; /* Allow the second input to take the remaining space */
+    }
+    button:not(.nocss) {
+    font-size: 13px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: rgb(204, 204, 204);
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+button:not(.nocss):hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+button:not(.nocss):active {
+    transform: translate(0em, 0.2em);
+}
+.black{
+    color:white;
+    background-color: black;
 }
