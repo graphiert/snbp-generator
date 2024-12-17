@@ -176,3 +176,10 @@ function playLatch() {
                 });
             });
         });
+        function updateThnText(value) {
+            const thnElements = document.getElementsByTagName("thn")
+
+            for (let i = 0; i < thnElements.length; i++) {
+                thnElements[i].textContent = value || "2025";
+            }
+        }
