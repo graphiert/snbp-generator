@@ -20,7 +20,12 @@
           const chromeIntent = `intent:${targetURL}#Intent;package=com.android.chrome;scheme=https;end`
           window.location.href = chromeIntent
         } else if (/iPad|iPhone|iPod/.test(userAgent)) {
-          window.location.href = `googlechrome://https://${targetURL}`
+          var a = window.document.createElement("a");
+          a.target = '_blank';
+          a.href = `https://${targetURL}`;
+          var e = window.document.createEvent("MouseEvents");
+          e.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+          a.dispatchEvent(e);
         } else {
           window.location.href = `https://${targetURL}`
         }
