@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intent</title>
+  <script>
+    function openURL() {
+      const params = new URLSearchParams(window.location.search)
+      const targetURL = params.get("q")
+
+      if (targetURL) {
+        if (targetURL.startsWith("http://") || targetURL.startsWith("https://")) {
+          const userAgent = navigator.userAgent || navigator.vendor || window.opera
+
+          if (/android/i.test(userAgent)) {
+            const chromeIntent = `intent:${targetURL}#Intent;package=com.android.chrome;scheme=https;end`
+            window.location.href = chromeIntent
+          } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            window.location.href = targetURL
+          } else {
+            window.location.href = targetURL
+          }
+        } else {
+          alert("Invalid URL provided")
+        }
+      } else {
+        alert("No URL provided in the query parameter `q`")
+      }
+    }
+
+    window.onload = openURL
+  </script>
+</head>
+</html>
