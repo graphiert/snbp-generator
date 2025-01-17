@@ -9,24 +9,31 @@
       const params = new URLSearchParams(window.location.search)
       const targetURL = params.get("q")
 
+      const linkElement = document.getElementById("dynamicLink")
       if (targetURL) {
-          const userAgent = navigator.userAgent || navigator.vendor || window.opera
+        linkElement.href = targetURL
+        linkElement.textContent = targetURL
 
-          if (/android/i.test(userAgent)) {
-            const chromeIntent = `intent:${targetURL}#Intent;package=com.android.chrome;scheme=https;end`
-            window.location.href = chromeIntent
-          } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            window.location.href = targetURL
-          } else {
-            window.location.href = targetURL
-          }
-        
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera
+
+        if (/android/i.test(userAgent)) {
+          const chromeIntent = `intent:${targetURL}#Intent;package=com.android.chrome;scheme=https;end`
+          window.location.href = chromeIntent
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          window.location.href = targetURL
+        } else {
+          window.location.href = targetURL
+        }
       } else {
         alert("No URL provided in the query parameter `q` Skibidi Sigma Grindset")
+        linkElement.textContent = "No URL Provided"
       }
     }
 
     window.onload = openURL
   </script>
 </head>
+<body>
+  <a id="dynamicLink" href="#">Loading link...</a>
+</body>
 </html>
