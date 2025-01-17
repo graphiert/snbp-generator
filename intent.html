@@ -8,16 +8,19 @@
     function openURL() {
       const params = new URLSearchParams(window.location.search)
       const targetURL = params.get("q")
-      
+
       if (targetURL) {
         const linkElement = document.getElementById("gen")
         linkElement.href = `https://${targetURL}`
         linkElement.textContent = "here"
 
         const userAgent = navigator.userAgent || navigator.vendor || window.opera
+
         if (/android/i.test(userAgent)) {
           const chromeIntent = `intent:${targetURL}#Intent;package=com.android.chrome;scheme=https;end`
           window.location.href = chromeIntent
+        } else if (/iPad|iPhone|iPod/.test(userAgent)) {
+          window.location.href = `googlechrome://https://${targetURL}`
         } else {
           window.location.href = `https://${targetURL}`
         }
