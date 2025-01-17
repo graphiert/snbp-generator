@@ -5,23 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intent</title>
   <script>
-    function redirect() {
-      window.location.href = `https://${params.get("q")}`
-    }
-
     function openURL() {
       const params = new URLSearchParams(window.location.search)
+      const targetURL = params.get("q")
+      
+      if (targetURL) {
+        const linkElement = document.getElementById("gen")
+        linkElement.href = `https://${targetURL}`
+        linkElement.textContent = "here"
 
-      const chromeIntent = `intent:${params.get("q")}#Intent;package=com.android.chrome;scheme=https;end`
-      window.location.href = chromeIntent
-        
-      redirect()
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera
+        if (/android/i.test(userAgent)) {
+          const chromeIntent = `intent:${targetURL}#Intent;package=com.android.chrome;scheme=https;end`
+          window.location.href = chromeIntent
+        } else {
+          window.location.href = `https://${targetURL}`
+        }
+      } else {
+        alert("No URL provided in the query parameter `q`")
+      }
     }
 
     window.onload = openURL
   </script>
 </head>
 <body>
-  <p>If not redirected automatically, click <u><a href="https://google.com">here</a></u>.</p>
+  <p>If not redirected automatically, click <u><a id="gen" href="https://anugrahbodi.github.io">here</a></u></p>
 </body>
 </html>
