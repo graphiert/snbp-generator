@@ -10,7 +10,6 @@
       const targetURL = params.get("q")
 
       if (targetURL) {
-        if (targetURL.startsWith("http://") || targetURL.startsWith("https://")) {
           const userAgent = navigator.userAgent || navigator.vendor || window.opera
 
           if (/android/i.test(userAgent)) {
@@ -21,11 +20,9 @@
           } else {
             window.location.href = targetURL
           }
-        } else {
-          alert("Invalid URL provided")
-        }
+        
       } else {
-        alert("No URL provided in the query parameter `q`")
+        alert("No URL provided in the query parameter `q` Skibidi Sigma Grindset")
       }
     }
 
