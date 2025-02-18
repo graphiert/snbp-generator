@@ -19,7 +19,7 @@ function onPlayerReady(event) {
   document.getElementById("thumbnail").src = "https://img.youtube.com/vi/" + videoData.video_id + "/default.jpg";
   updateDuration();
   setInterval(updateTime, 500);
-  setTimeout(togglePlay, 100);
+  setTimeout(togglePlay, 2000);
 }
 function onPlayerStateChange(event) {
   if (event.data === YT.PlayerState.ENDED) {
