@@ -1,0 +1,42 @@
+     #audio-player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      background: #222;
+      padding: 10px;
+      border-radius: 8px;
+      color: white;
+      width: 320px;
+      margin: 20px auto;
+    }
+    #header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #thumbnail {
+      width: 60px;
+      height: auto;
+      border-radius: 4px;
+    }
+    #audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    #play-pause {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #seek-bar {
+      width: 150px;
+    }
+    #youtube-player {
+      width: 1px;
+      height: 1px;
+      visibility: hidden;
+    }
