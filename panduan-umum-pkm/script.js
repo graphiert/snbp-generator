@@ -1,4 +1,3 @@
-   <script>
     let player;
     let isPlaying = false;
     function onYouTubeIframeAPIReady() {
@@ -59,5 +58,3 @@
     }
     document.getElementById("play-pause").addEventListener("click", togglePlay);
     document.getElementById("seek-bar").addEventListener("input", seekAudio);
-  </script>
-  <script src="https://www.youtube.com/iframe_api"></script>
