@@ -161,4 +161,11 @@
                 thnElements[i].textContent = value || "2025"
             }
         }
+
+        function bantuAku() {
+            var result = confirm("Plis bantuin temen author yang lagi adain penelitian, ngisi kuisioner bentar aja sekitar 5-10 menit. Yang bantu semoga lolos pilihan pertama SNBP, deh! (forms.gle)");
+            if (result) {
+                window.location.href = "https://forms.gle/ytTiaDqkVcqoEhiX8"
+            }
+        }
     
