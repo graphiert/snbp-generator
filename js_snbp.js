@@ -163,7 +163,7 @@
         }
 
         function bantuAku() {
-            var result = confirm("Ayo daftar lomba, boleh buat anak kuliah atau anak SMA/ sederajat, lomba ngoding/ ui ux/ paper/ poster, mending klen daftar sekarang dah sebelum tutup (s.id)");
+            var result = confirm("Ayo daftar lomba, boleh buat anak kuliah atau anak SMA/ sederajat, lomba ngoding/ ui ux/ paper/ poster, mending klen daftar sekarang dah sebelum tutup, cocok buat persiapan mental sebelum SNBT (s.id)");
             if (result) {
                 window.location.href = "https://s.id/CodeFestUSU"
             }
