@@ -163,9 +163,9 @@
         }
 
         function bantuAku() {
-            var result = confirm("Plis bantuin temen author yang lagi adain penelitian, ngisi kuisioner bentar aja sekitar 5-10 menit. Yang bantu semoga lolos pilihan pertama SNBP, deh! (forms.gle)");
+            var result = confirm("Ayo daftar lomba, boleh buat anak kuliah atau anak SMA/ sederajat, lomba ngoding/ ui ux/ paper/ poster, mending klen daftar sekarang dah sebelum tutup (s.id)");
             if (result) {
-                window.location.href = "https://forms.gle/ytTiaDqkVcqoEhiX8"
+                window.location.href = "https://s.id/CodeFestUSU"
             }
         }
     
