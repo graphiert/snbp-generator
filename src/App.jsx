@@ -9,7 +9,7 @@ function App() {
   });
 
   return (
-    <div className="relative">
+    <div className="relative min-h-screen">
       {!result.mode ? (
         <Form setData={setResult} />
       ) : result.mode == "accepted" ? (
