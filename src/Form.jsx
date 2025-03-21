@@ -50,17 +50,19 @@ const FormPendaftaran = ({ setData }) => {
         <span className="text-red-700">Disclaimer: </span>Mohon untuk tidak
         menggunakan ini sebagai bukti semestinya. Gunakan untuk hiburan saja!
       </p>
-      <ul class="ml-6 mb-4 list-disc">
-        <li target="_blank" class="text-sm/1.5 text-gray-800 mb-4">
+      <ul class="ml-6 mb-6 list-disc">
+        <li class="text-sm/1.5 text-gray-800 mb-4">
           <a
+            target="_blank"
             class="font-semibold underline text-blue-500"
             href="https://sidata-ptn-snpmb.bppp.kemdikbud.go.id/ptn_sb.php"
           >
             Daftar Universitas & Prodi
           </a>
         </li>
-        <li target="_blank" class="text-sm/1.5 text-gray-800 mb-4">
+        <li class="text-sm/1.5 text-gray-800 mb-4">
           <a
+            target="_blank"
             class="font-semibold underline text-blue-500"
             href="https://id.wikipedia.org/wiki/Daftar_kabupaten_dan_kota_di_Indonesia_menurut_provinsi"
           >
